@@ -2,25 +2,30 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // Исходный массив
-        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        // Размер квадратного массива
+        int n = 5;
 
-        // Вывод исходного массива
-        System.out.println("Исходный массив: " + Arrays.toString(array));
+        // Создание двумерного массива размером n x n
+        int[][] matrix = new int[n][n];
 
-        // Обработка массива: числа меньше 6 умножаются на 2
-        modifyArray(array);
+        // Заполнение главной диагонали единицами
+        fillMainDiagonal(matrix);
 
-        // Вывод изменённого массива
-        System.out.println("Изменённый массив: " + Arrays.toString(array));
+        // Вывод массива на экран
+        printMatrix(matrix);
     }
 
 
-    public static void modifyArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < 6) { // Проверяем, меньше ли число 6
-                array[i] *= 2; // Умножаем на 2
-            }
+    public static void fillMainDiagonal(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i][i] = 1; // Главная диагональ: индексы [i][i]
+        }
+    }
+
+
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            System.out.println(Arrays.toString(row));
         }
     }
 }

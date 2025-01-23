@@ -2,19 +2,26 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // Создание пустого массива длиной 100
-        int[] array = new int[100];
+        // Исходный массив
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
 
-        // Заполнение массива числами от 1 до 100
-        fillArray(array);
+        // Вывод исходного массива
+        System.out.println("Исходный массив: " + Arrays.toString(array));
 
-        // Вывод заполненного массива
-        System.out.println("Заполненный массив: " + Arrays.toString(array));
+        // Обработка массива: числа меньше 6 умножаются на 2
+        modifyArray(array);
+
+        // Вывод изменённого массива
+        System.out.println("Изменённый массив: " + Arrays.toString(array));
     }
 
-    public static void fillArray(int[] array) {
+
+    public static void modifyArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = i + 1; // Записываем в массив число (индекс + 1)
+            if (array[i] < 6) { // Проверяем, меньше ли число 6
+                array[i] *= 2; // Умножаем на 2
+            }
         }
     }
 }
+

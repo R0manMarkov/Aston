@@ -1,15 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        printNumberSign(10);  // Положительное
-        printNumberSign(-5);  // Отрицательное
-        printNumberSign(0);   // Положительное
+        System.out.println(isNegative(10));  // false
+        System.out.println(isNegative(-5)); // true
+        System.out.println(isNegative(0));  // false
     }
 
-    public static void printNumberSign(int number) {
-        if (number >= 0) {
-            System.out.println("Число положительное");
-        } else {
-            System.out.println("Число отрицательное");
-        }
+    public static boolean isNegative(int number) {
+        return number < 0; // Возвращает true, если число отрицательное
     }
 }

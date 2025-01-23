@@ -1,0 +1,20 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Игнорировать настройки IntelliJ IDEA
+.idea/
+*.iml
+
+# Игнорировать скомпилированные файлы
+out/
+
+# Игнорировать файлы, которые могут быть сгенерированы IDE или системой сборки
+*.log
+*.bak
+*.swp
+
+# Игнорировать локальные файлы конфигурации
+dbnavigator.xml
+misc.xml
+modules.xml
+vcs.xml

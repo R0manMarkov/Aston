@@ -1,17 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        printColor();
+        compareNumbers();
     }
 
-    public static void printColor() {
-        int value = 50; // Пример значения переменной value
+    public static void compareNumbers() {
+        int a = 10; // Пример значения переменной a
+        int b = 20; // Пример значения переменной b
 
-        if (value < 0) {
-            System.out.println("Красный");
-        } else if (value <= 100) {
-            System.out.println("Жёлтый");
+        if (a >= b) {
+            System.out.println("a >= b");
         } else {
-            System.out.println("Зелёный");
+            System.out.println("a < b");
         }
     }
 }

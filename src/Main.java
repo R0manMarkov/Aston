@@ -1,18 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        checkSumSign();
+        printColor();
     }
 
-    public static void checkSumSign() {
-        int a = 5;  // Пример значения переменной a
-        int b = -10; // Пример значения переменной b
+    public static void printColor() {
+        int value = 50; // Пример значения переменной value
 
-        int sum = a + b; // Суммируем переменные
-
-        if (sum >= 0) {
-            System.out.println("Сумма положительная");
+        if (value < 0) {
+            System.out.println("Красный");
+        } else if (value <= 100) {
+            System.out.println("Жёлтый");
         } else {
-            System.out.println("Сумма отрицательная");
+            System.out.println("Зелёный");
         }
     }
 }

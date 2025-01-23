@@ -1,12 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        // Пример вызова метода
-        System.out.println(isSumInRange(5, 10)); // true
-        System.out.println(isSumInRange(15, 10)); // false
+        printNumberSign(10);  // Положительное
+        printNumberSign(-5);  // Отрицательное
+        printNumberSign(0);   // Положительное
     }
 
-    public static boolean isSumInRange(int a, int b) {
-        int sum = a + b; // Вычисляем сумму
-        return sum >= 10 && sum <= 20; // Проверяем условие
+    public static void printNumberSign(int number) {
+        if (number >= 0) {
+            System.out.println("Число положительное");
+        } else {
+            System.out.println("Число отрицательное");
+        }
     }
 }

@@ -1,32 +1,32 @@
 import java.util.Arrays;
 
+
+
 public class Main {
     public static void main(String[] args) {
-        // Размер квадратного массива
-        int n = 5;
+        // Пример вызова метода
+        int len = 10;
+        int initialValue = 5;
 
-        // Создание двумерного массива размером n x n
-        int[][] matrix = new int[n][n];
-
-        // Заполнение главной диагонали единицами
-        fillMainDiagonal(matrix);
+        // Создание массива
+        int[] resultArray = createArray(len, initialValue);
 
         // Вывод массива на экран
-        printMatrix(matrix);
+        System.out.println("Результирующий массив: " + Arrays.toString(resultArray));
     }
 
 
-    public static void fillMainDiagonal(int[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            matrix[i][i] = 1; // Главная диагональ: индексы [i][i]
-        }
-    }
+    public static int[] createArray(int len, int initialValue) {
+        // Создаём массив заданной длины
+        int[] array = new int[len];
 
-
-    public static void printMatrix(int[][] matrix) {
-        for (int[] row : matrix) {
-            System.out.println(Arrays.toString(row));
+        // Заполняем массив значением initialValue
+        for (int i = 0; i < len; i++) {
+            array[i] = initialValue;
         }
+
+        return array; // Возвращаем заполненный массив
     }
 }
+
 

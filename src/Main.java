@@ -1,16 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        compareNumbers();
+        // Пример вызова метода
+        System.out.println(isSumInRange(5, 10)); // true
+        System.out.println(isSumInRange(15, 10)); // false
     }
 
-    public static void compareNumbers() {
-        int a = 10; // Пример значения переменной a
-        int b = 20; // Пример значения переменной b
-
-        if (a >= b) {
-            System.out.println("a >= b");
-        } else {
-            System.out.println("a < b");
-        }
+    public static boolean isSumInRange(int a, int b) {
+        int sum = a + b; // Вычисляем сумму
+        return sum >= 10 && sum <= 20; // Проверяем условие
     }
 }

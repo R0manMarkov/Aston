@@ -1,11 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(isNegative(10));  // false
-        System.out.println(isNegative(-5)); // true
-        System.out.println(isNegative(0));  // false
+        // Пример вызова метода
+        printStringMultipleTimes("Привет, мир!", 5);
     }
 
-    public static boolean isNegative(int number) {
-        return number < 0; // Возвращает true, если число отрицательное
+    public static void printStringMultipleTimes(String str, int count) {
+        for (int i = 0; i < count; i++) {
+            System.out.println(str);
+        }
     }
 }

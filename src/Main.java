@@ -1,16 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        Dog dog = new Dog("Бобик");
-        Cat cat1 = new Cat("Мурзик");
-        Cat cat2 = new Cat("Барсик");
+        Shape circle = new Circle(5, "Красный", "Черный");
+        Shape rectangle = new Rectangle(4, 6, "Синий", "Зеленый");
+        Shape triangle = new Triangle(3, 4, 5, "Желтый", "Фиолетовый");
 
-        Bowl bowl = new Bowl(15);
-        System.out.println("В миске сейчас " + bowl.getFood() + " еды.");
-
-        cat1.eat(bowl, 10);
-        cat2.eat(bowl, 10);
-
-        bowl.addFood(10);
-        cat2.eat(bowl, 10);
+        circle.printDetails();
+        rectangle.printDetails();
+        triangle.printDetails();
     }
 }
